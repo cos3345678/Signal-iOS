@@ -500,6 +500,9 @@ typedef enum : NSUInteger {
                                                                                                                @"Short name for edit menu item to share contents of media message.")
                                                                                       action:shareSelector],
                                                            ];
+
+    [self.collectionView.collectionViewLayout invalidateLayout];
+    [self.collectionView reloadData];
 }
 
 - (void)startReadTimer {
